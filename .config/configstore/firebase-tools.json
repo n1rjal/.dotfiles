@@ -1,0 +1,37 @@
+{
+	"motd": {
+		"cloudBuildErrorAfter": 1594252800000,
+		"cloudBuildWarnAfter": 1590019200000,
+		"defaultNode10After": 1594252800000,
+		"minVersion": "3.0.5",
+		"node8DeploysDisabledAfter": 1613390400000,
+		"node8RuntimeDisabledAfter": 1615809600000,
+		"node8WarnAfter": 1600128000000,
+		"fetched": 1698830852469
+	},
+	"analytics-uuid": "9d04b5bd-1a36-4788-b3ff-d265e41f2723",
+	"usage": false,
+	"user": {
+		"iss": "accounts.google.com",
+		"azp": "563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com",
+		"aud": "563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com",
+		"sub": "112841801759917870000",
+		"email": "hyteno.tech@gmail.com",
+		"email_verified": true,
+		"at_hash": "L7qA5LC9-uij1Dr4BjhcGg",
+		"iat": 1698830890,
+		"exp": 1698834490
+	},
+	"tokens": {
+		"expires_at": 1698834489977,
+		"access_token": "ya29.a0AfB_byCCQMHBlSFm4zaVJAXrxyXLX18BSVuHyrL9Hg97pijS_pY7xMTLySB2rdaEJ8FOKOsHS9-so-Jmp-w40Sj-BtPii65zYmv6NT_jeOMpnTIT5g2kFue2foJ_Ptp9G_oKQdSiJrsPcXdyoMfPiWKhHY_CUomn-TM5TnhP9gaCgYKAaISARESFQGOcNnC6-ehtaTr-tdiXOtkTWxM5g0177",
+		"expires_in": 3599,
+		"refresh_token": "1//0g1IyuLQ82jSsCgYIARAAGBASNwF-L9Ir1OMG3xqa__5JvZvt0DVBcslAZqmza8UebKf0yYjPE1CLZGxMvIIG0Q8kN5IM7FzGJVI",
+		"scope": "https://www.googleapis.com/auth/cloud-platform openid https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase https://www.googleapis.com/auth/userinfo.email",
+		"token_type": "Bearer",
+		"id_token": "eyJhbGciOiJSUzI1NiIsImtpZCI6ImY1ZjRiZjQ2ZTUyYjMxZDliNjI0OWY3MzA5YWQwMzM4NDAwNjgwY2QiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiNTYzNTg0MzM1ODY5LWZncmhnbWQ0N2JxbmVraWo1aThiNXByMDNobzg0OWU2LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwiYXVkIjoiNTYzNTg0MzM1ODY5LWZncmhnbWQ0N2JxbmVraWo1aThiNXByMDNobzg0OWU2LmFwcHMuZ29vZ2xldXNlcmNvbnRlbnQuY29tIiwic3ViIjoiMTEyODQxODAxNzU5OTE3ODcwMDAwIiwiZW1haWwiOiJoeXRlbm8udGVjaEBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6Ikw3cUE1TEM5LXVpajFEcjRCamhjR2ciLCJpYXQiOjE2OTg4MzA4OTAsImV4cCI6MTY5ODgzNDQ5MH0.GoW-WvbVj5riTrXocRe5xXk8PYN3fr2vnUS7_RlZHFiC5V11KJAEnyGs3mVpGQypoYcfQBQEjcrco-qzw35tuPorH4nDHGIcNw3lKKPL_CZCHggCB8bA7GUPP809qAtDcLggPUtHV96J36uge76CVQ2NRWxn4fCGuEF0iI21d_EM0lcQbGTV-Suz5JqrnydM2gciP10C7s2tBwqaVQ8g9ELbJAmmtqviySTVQGrTMWnQ8Hml-uGWvKkc4FLnuhERNQQe6FdaQKjIi5AwAu5vYtrb-e0sCuKQvmHzFU9ovtZLL48981jtmj8IIwQWH1OXQIEdtDikBwiBalZ5QaPS2A"
+	},
+	"activeProjects": {
+		"/Users/nirjalpaudel/Programming/hifoods": "hi-foods-79fc3"
+	}
+}

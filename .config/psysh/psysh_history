@@ -1,0 +1,11 @@
+_HiStOrY_V2_
+use\040Illuminate\134Support\134Facades\134DB;
+DB::table('item_color_swtaches')->whereIn('plenty_id',\040[123009,123010])
+use\040Illuminate\134Support\134Facades\134DB;
+DB::table('item_color_swtaches')->whereIn('plenty_id',\040[123009,123010])->get()
+use\040app/Models/BlogCaegory
+use\040app/Models/BlogCateggory
+use\040app/Models/BlogCateggory;
+use\040app\134Models\134BlogCateggory;
+BlogCategory
+BlogCategory::query()

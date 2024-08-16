@@ -1,0 +1,13 @@
+color = ''
+project-name = 'default'
+[default]
+account_id = 'acct_1NItdjLnKCUtAxGE'
+device_name = 'N1M1'
+display_name = 'Hyteno'
+live_mode_api_key = 'rk_live_***********************************************************************************************6Go7'
+live_mode_key_expires_at = '2024-04-10'
+live_mode_pub_key = 'pk_live_51NItdjLnKCUtAxGEttMXH8zx4nFAgnQvZ8ITOn0TMJE6iBHj7O0Kz67cH0i4pb3kGz6JKtMESN85y7zW9U5g1cxR00JJUPt0Gn'
+test_mode_api_key = 'rk_test_51NItdjLnKCUtAxGE7Tx7SJ4s6EcOe5pcw4laXJIS9fI7ulah6X6vntANJ3w4VTPfE9sKumqpbUycXlu7dWG9btjK00s7C3y9ft'
+test_mode_key_expires_at = '2024-04-10'
+test_mode_pub_key = 'pk_test_51NItdjLnKCUtAxGExghUraul5WmxCee77PnprCERsMDQNxWUvNFHUoitwOytIuORe25mkefPGQ9pbmFy0ZlKARbx00dg4w463C'
+

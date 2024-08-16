@@ -1,0 +1,23 @@
+alias gf="git-flow"
+alias op="netstat -vanp tcp"
+alias g="git"
+alias ll="ls -al"
+alias d="docker"
+alias dc="docker compose"
+alias mkcd='mkdir -p "$@" && cd "$@"'
+alias pm='python3 manage.py'
+alias pmr='python3 manage.py runserver'
+alias pmm='python3 manage.py makemigrations && python3 manage.py migrate'
+alias pkill='ps aux | grep -v grep | grep $1 | awk '{print $2}' | xargs kill -9'
+alias p='pwd | pbcopy'
+alias j2c='in2csv -f=json | csvlook'
+alias tt='tmux attach -t'
+alias tks='tmux kill-session -t'
+alias tls='tmux ls'
+alias ddw="NODE_ENV=\"development\" pnpm start:debug"
+alias pdw="NODE_ENV=\"production\" pnpm start:debug"
+alias nm="npx nodemon"
+alias gd="git diff"
+alias gst="git status"
+alias vim=nvim
+alias ytmp3="yt-dlp -x --audio-format=mp3"
