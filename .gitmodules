@@ -10,3 +10,6 @@
 [submodule "tmux_package/.tmuxifier"]
 	path = tmux_package/.tmuxifier
 	url = https://github.com/jimeh/tmuxifier.git
+[submodule "config_package/.config/nvim"]
+	path = config_package/.config/nvim
+	url = https://github.com/n1rjal/init.lua.git
