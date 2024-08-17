@@ -1,0 +1,8 @@
+brew_programs_list.txt
+
+.git
+.gitignore
+*.swp
+*.swo
+*.DS_Store
+node_modules
