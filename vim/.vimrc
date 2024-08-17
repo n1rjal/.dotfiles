@@ -1,6 +1,12 @@
 " Disable GUI cursor
 set guicursor=
 
+" Enable syntax highlighting
+syntax on
+
+" Set a color scheme that's easy on the eyes and works well in most terminals
+colorscheme desert
+
 " Enable line numbers and relative line numbers
 set number
 set relativenumber
