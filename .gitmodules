@@ -1,3 +1,12 @@
 [submodule ".config/nvim"]
 	path = .config/nvim
 	url = https://github.com/n1rjal/init.lua.git
+[submodule "tmux_package/tmux/plugins/tpm"]
+	path = tmux_package/tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "tmux_package/.tmux/plugins/tpm"]
+	path = tmux_package/.tmux/plugins/tpm
+	url = https://github.com/tmux-plugins/tpm
+[submodule "tmux_package/.tmuxifier"]
+	path = tmux_package/.tmuxifier
+	url = https://github.com/jimeh/tmuxifier.git

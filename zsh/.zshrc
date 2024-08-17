@@ -1,5 +1,5 @@
-source ~/dotfiles/.aliases
-source ~/dotfiles/.function
+source ~/.dotfiles/.aliases
+source ~/.dotfiles/.bash_functions
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -123,11 +123,8 @@ if [ -f '/Users/nirjalpaudel/Downloads/google-cloud-sdk/path.zsh.inc' ]; then . 
 if [ -f '/Users/nirjalpaudel/Downloads/google-cloud-sdk/completion.zsh.inc' ]; then . '/Users/nirjalpaudel/Downloads/google-cloud-sdk/completion.zsh.inc'; fi
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 eval
-
-export PATH="$HOME/.tmux/plugins/tmuxifier/bin:$PATH"
+export PATH="$HOME/.dotfiles/tmux_package/.tmuxifier/bin:$PATH"
 eval "$(tmuxifier init -)"
-alias tsls="tmuxifier ls"
-alias ts="tmuxifier load-session"
 export PATH="~/.tmux/plugins/tmuxifier/bin:$PATH"
 export PATH="/Library/Frameworks/Python.framework/Versions/3.12/bin:$PATH"
 
@@ -161,3 +158,5 @@ export PATH="/Users/nirjalpaudel/.modular/pkg/packages.modular.com_mojo/bin:$PAT
   export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+
+export HOMEBREW_NO_AUTO_UPDATE=1
