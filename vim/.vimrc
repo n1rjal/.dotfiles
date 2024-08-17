@@ -61,5 +61,32 @@ let g:user_emmet_leader_key = ','
 set nospell
 set spelllang=en_us
 
+" Enable clipboard sharing with the system (useful for online editors)
+set clipboard=unnamedplus
+
+" Show matching parentheses and brackets
+set showmatch
+
+" Set a more visible cursorline
+set cursorline
+
+" Turn off annoying bell sounds
+set noerrorbells
+set visualbell
+
+" Set a basic status line
+set laststatus=2
+set statusline=%f\ %h%m%r\ %=%-14.(%l,%c%V%)\ %P
+
+" Set file encoding to UTF-8
+set encoding=utf-8
+set fileencoding=utf-8
+
+" Enable mouse support (if supported by the online environment)
+set mouse=a
+
+" Use 256-color mode (better compatibility with modern terminals)
+set t_Co=256
+
 " Enable syntax highlighting
 syntax on
