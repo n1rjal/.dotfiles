@@ -1,5 +1,6 @@
 source ~/.dotfiles/.aliases
 source ~/.dotfiles/.bash_functions
+source ~/.nirjal_bash
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -160,3 +161,14 @@ export PATH="/Users/nirjalpaudel/.modular/pkg/packages.modular.com_mojo/bin:$PAT
   [ -s "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm" ] && \. "/opt/homebrew/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
 export HOMEBREW_NO_AUTO_UPDATE=1
+export PATH="/opt/homebrew/opt/mysql@8.4/bin:$PATH"
+export PATH="/opt/homebrew/opt/mysql-client@8.4/bin:$PATH"
+export LDFLAGS="-L/opt/homebrew/opt/mysql@8.4/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/mysql@8.4/include"
+# MySQL-specific environment variables
+export LDFLAGS="-L/opt/homebrew/opt/mysql@8.4/lib"
+export CPPFLAGS="-I/opt/homebrew/opt/mysql@8.4/include"
+export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql@8.4/lib/pkgconfig"
+export PYENV_ROOT="$HOME/.pyenv"
+[[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init - zsh)"

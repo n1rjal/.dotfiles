@@ -39,38 +39,38 @@ function gpl(){
 
 
 function tns() {
-  if [ -z "$1" ]; then
-    echo "Usage: tns <session_name>"
-    return 1
-  fi
+    if [ -z "$1" ]; then
+      echo "Usage: tns <session_name>"
+      return 1
+    fi
 
-  local SESSION_NAME=$1
+    SESSION_NAME=$1
 
-  # Check if the session already exists
-  if tmux has-session -t "$SESSION_NAME" 2>/dev/null; then
-    echo "Session $SESSION_NAME already exists. Attaching to it..."
+# Check if the session already exists
+    if tmux has-session -t "$SESSION_NAME" 2>/dev/null; then
+      echo "Session $SESSION_NAME already exists. Attaching to it..."
+      tmux attach-session -t "$SESSION_NAME"
+      return 0
+    fi
+
+    echo "Starting new tmux session..."
+    tmux new-session -d -s "$SESSION_NAME" -n 'code' || { echo "Failed to create tmux session."; return 1; }
+
+    echo "Sending keys to vim..."
+    tmux send-keys -t "$SESSION_NAME:1" 'vim .' C-m || { echo "Failed to send keys to vim."; return 1; }
+
+    echo "Creating new window named 'server'..."
+    tmux new-window -t "$SESSION_NAME" -n 'server' || { echo "Failed to create new window."; return 1; }
+
+    echo "Creating new window named 'server2'..."
+    tmux new-window -t "$SESSION_NAME" -n 'server2' || { echo "Failed to create new window."; return 1; }
+
+    echo "Creating new window named 'empty'..."
+    tmux new-window -t "$SESSION_NAME" -n 'empty' || { echo "Failed to create new window."; return 1; }
+
+    echo "Selecting window 1..."
+    tmux select-window -t "$SESSION_NAME:1" || { echo "Failed to select window 1."; return 1; }
+
+    echo "Attaching to session..."
     tmux attach-session -t "$SESSION_NAME"
-    return 0
-  fi
-
-  echo "Starting new tmux session..."
-  tmux new-session -d -s "$SESSION_NAME" || { echo "Failed to create tmux session."; return 1; }
-
-  echo "Splitting window..."
-  tmux split-window -v -p 30 -t "$SESSION_NAME:1.1" || { echo "Failed to split window."; return 1; }
-
-  echo "Sending keys to vim..."
-  tmux send-keys -t "$SESSION_NAME:1.1" 'vim .' C-m || { echo "Failed to send keys to vim."; return 1; }
-
-  echo "Creating new window named 'empty'..."
-  tmux new-window -t "$SESSION_NAME:2" -n 'empty' || { echo "Failed to create new window."; return 1; }
-
-  echo "Selecting window 1..."
-  tmux select-window -t "$SESSION_NAME:1" || { echo "Failed to select window 1."; return 1; }
-
-  echo "Selecting pane 1.1..."
-  tmux select-pane -t "$SESSION_NAME:1.1" || { echo "Failed to select pane 1.1."; return 1; }
-
-  echo "Attaching to session..."
-  tmux attach-session -t "$SESSION_NAME"
 }
