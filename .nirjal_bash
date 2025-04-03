@@ -1,0 +1,141 @@
+## Custom variable for using the things
+
+alias gf="git-flow"
+alias op="netstat -vanp tcp"
+alias g="git"
+alias ll="ls -al"
+alias d="docker"
+alias dc="docker compose"
+alias mkcd='mkdir -p "$@" && cd "$@"'
+
+# for django
+alias pm='python3 manage.py'
+alias pmr='python3 manage.py runserver'
+alias pmm='python3 manage.py makemigrations && python3 manage.py migrate'
+alias pkill='ps aux | grep -v grep | grep $1 | awk '{print $2}' | xargs kill -9'
+
+
+# Copy current path to clipboard
+alias p='pwd | pbcopy'
+
+# Json to csv
+alias j2c='in2csv -f=json | csvlook'
+
+
+alias tt='tmux attach -t'
+alias tks='tmux kill-session -t'
+alias tls='tmux ls'
+
+
+function tns() {
+  if [ -z "$1" ]; then
+    echo "Usage: tns <session_name>"
+    return 1
+  fi
+
+  local SESSION_NAME=$1
+
+  # Check if the session already exists
+  if tmux has-session -t "$SESSION_NAME" 2>/dev/null; then
+    echo "Session $SESSION_NAME already exists. Attaching to it..."
+    tmux attach-session -t "$SESSION_NAME"
+    return 0
+  fi
+
+  echo "Starting new tmux session..."
+  tmux new-session -d -s "$SESSION_NAME" || { echo "Failed to create tmux session."; return 1; }
+
+  echo "Splitting window..."
+  tmux split-window -v -p 30 -t "$SESSION_NAME:1.1" || { echo "Failed to split window."; return 1; }
+
+  echo "Sending keys to vim..."
+  tmux send-keys -t "$SESSION_NAME:1.1" 'vim .' C-m || { echo "Failed to send keys to vim."; return 1; }
+
+  echo "Creating new window named 'empty'..."
+  tmux new-window -t "$SESSION_NAME:2" -n 'empty' || { echo "Failed to create new window."; return 1; }
+
+  echo "Selecting window 1..."
+  tmux select-window -t "$SESSION_NAME:1" || { echo "Failed to select window 1."; return 1; }
+
+  echo "Selecting pane 1.1..."
+  tmux select-pane -t "$SESSION_NAME:1.1" || { echo "Failed to select pane 1.1."; return 1; }
+
+  echo "Attaching to session..."
+  tmux attach-session -t "$SESSION_NAME"
+}
+
+# for nestjs
+alias ddw="NODE_ENV=\"development\" pnpm start:debug"
+alias pdw="NODE_ENV=\"production\" pnpm start:debug"
+
+
+
+# nodejs nodemon
+alias nm="npx nodemon"
+
+alias gd="git diff"
+alias gst="git status"
+
+
+# Add Commit push
+function acp() {
+       git add .;
+       git commit -m "$1"
+       # Calculate Current Branch
+       cb=$(git branch | grep '[*]' | sed 's/* //g');
+       # Push into server;
+       git push origin $cb;
+}
+
+function gpl(){
+       cb=$(git branch | grep '[*]' | sed 's/* //g');
+       git pull origin $cb;
+}
+
+
+
+jj() {
+    if [ "$#" -ne 1 ]; then
+        echo "Usage: jj <FullJavaFileName>"
+        return 1
+    fi
+
+    local filename="$1"
+    local dirName=$(dirname "${filename}")
+    local className=$(basename "${filename}" .java)
+
+    # Compile the Java file
+    javac "${filename}"
+    if [ $? -ne 0 ]; then
+        echo "Compilation failed."
+        return 1
+    fi
+
+    # Change to the directory where the class file is located
+    pushd "${dirName}" > /dev/null
+
+    # Run the compiled Java class
+    java "${className}"
+
+    # Return to the original directory
+    popd > /dev/null
+}
+
+
+export PATH="/Users/nirjalpaudel/.local/bin:$PATH"
+
+# Add Commit only
+function ac() {
+       git add .;
+       git commit -m "$1"
+}
+
+
+vo() {
+    local dir
+    dir=$(find ${1:-.} -type d \( ! -path "*/.*" -and ! -path "*/node_modules/*" \) 2> /dev/null | fzf) && cd "$dir" && nvim .
+}
+
+alias vim=nvim
+export PATH="/Users/nirjalpaudel/neovim/bin/:$PATH"
+alias ytmp3="yt-dlp -x --audio-format=mp3"
