@@ -73,7 +73,10 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+    git
+    zsh-autosuggestions
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -172,3 +175,10 @@ export PKG_CONFIG_PATH="/opt/homebrew/opt/mysql@8.4/lib/pkgconfig"
 export PYENV_ROOT="$HOME/.pyenv"
 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
 eval "$(pyenv init - zsh)"
+
+export CPLUS_INCLUDE_PATH=/opt/homebrew/include
+export C_INCLUDE_PATH=/opt/homebrew/include
+
+export GDAL_LIBRARY_PATH="/Applications/Postgres.app/Contents/Versions/latest/lib/libgdal.dylib"
+export GEOS_LIBRARY_PATH="/Applications/Postgres.app/Contents/Versions/latest/lib/libgeos_c.dylib"
+export PYTHONBREAKPOINT=pdbpp.set_trace
