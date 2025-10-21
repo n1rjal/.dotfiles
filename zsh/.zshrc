@@ -182,3 +182,4 @@ export C_INCLUDE_PATH=/opt/homebrew/include
 export GDAL_LIBRARY_PATH="/Applications/Postgres.app/Contents/Versions/latest/lib/libgdal.dylib"
 export GEOS_LIBRARY_PATH="/Applications/Postgres.app/Contents/Versions/latest/lib/libgeos_c.dylib"
 export PYTHONBREAKPOINT=pdbpp.set_trace
+export PATH="/opt/android-platform-tools:$PATH"
